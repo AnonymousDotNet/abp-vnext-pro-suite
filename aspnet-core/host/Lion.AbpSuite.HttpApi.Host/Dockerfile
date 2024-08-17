@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/aspnet:7.0
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
 
 # 创建目录
 RUN mkdir /app
@@ -21,8 +21,8 @@ RUN echo "deb http://mirrors.aliyun.com/debian/ bullseye main non-free contrib" 
 # 设置工作目录
 WORKDIR /app
 
-# 暴露80端口
-EXPOSE 80
+# 暴露8080端口
+EXPOSE 8080
 # 设置时区 .net6 才有这个问题
 ENV TZ=Asia/Shanghai
 
